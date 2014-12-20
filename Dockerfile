@@ -11,7 +11,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
  && apt-get update \
  && apt-get upgrade -y \
  && echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections \
- && apt-get -y \
+ && apt-get -y install \
     oracle-java8-installer \
     oracle-java8-set-default \
  && update-alternatives --display java \
